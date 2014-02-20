@@ -19,5 +19,8 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/dvberkel/JS1k.2014/issues"
+  },
+  "devDependencies": {
+    "minify": "~0.2.5"
   }
 }

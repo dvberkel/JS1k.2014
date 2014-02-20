@@ -1,0 +1,23 @@
+{
+  "private": true,
+  "name": "JS1k.2014",
+  "version": "0.0.0",
+  "description": "A shot at the JS1k 2014 competition",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dvberkel/JS1k.2014.git"
+  },
+  "keywords": [
+    "JS1k",
+    "2014"
+  ],
+  "author": "Daan van Berkel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dvberkel/JS1k.2014/issues"
+  }
+}

@@ -23,17 +23,23 @@
 	context.rotate(angle);
     }
 
-    draw();
-    forward();
-    left();
+    var move = function(goLeft){
+	forward();
+	if (goLeft) {
+	    left();
+	} else {
+	    right();
+	}
+    }
 
     draw();
-    forward();
-    left();
+    move(true);
 
     draw();
-    forward();
-    right();
+    move(true);
+
+    draw();
+    move (false);
 
     draw();
 })(a,c);

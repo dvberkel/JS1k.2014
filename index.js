@@ -1,5 +1,5 @@
 (function(canvas, context){
-    context.translate(canvas.width/2, canvas.height/2);
+    context.translate(2*canvas.width/3, 2*canvas.height/3);
     context.strokeStyle = 'black';
     var size = 5;
     var angle = Math.PI/2;

@@ -1,4 +1,4 @@
-(function(canvas, context){
+(function(canvas, context, requestAnimationFrame){
     context.translate(2*canvas.width/3, 2*canvas.height/3);
     context.strokeStyle = 'black';
     var size = 5;
@@ -36,9 +36,11 @@
 	return (((n & -n) << 1) & n) !== 0;
     }
 
-    var n = 1; var max = Math.pow(2,12);
-    while (n <= max) {
+    var n = 1;
+    var continous = function(){
 	draw();
 	move(direction(n++));
+	requestAnimationFrame(continous);
     }
-})(a,c);
+    continous();
+})(a,c, requestAnimationFrame);

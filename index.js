@@ -2,6 +2,7 @@
     context.translate(canvas.width/2, canvas.height/2);
     context.strokeStyle = 'black';
     var size = 50;
+    var angle = Math.PI/2;
 
     var draw = function(){
 	context.beginPath();
@@ -15,11 +16,11 @@
     }
 
     var left = function(){
-	context.rotate(-Math.PI/2);
+	context.rotate(-angle);
     }
 
     var right = function(){
-	context.rotate(Math.PI/2);
+	context.rotate(angle);
     }
 
     draw();

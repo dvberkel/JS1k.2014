@@ -1,0 +1,1 @@
+!function(t,n){n.translate(t.width/2,t.height/2),n.strokeStyle="black";var a=50,o=function(){n.beginPath(),n.moveTo(0,0),n.lineTo(a,0),n.stroke()},e=function(){n.translate(a,0)},i=function(){n.rotate(-Math.PI/2)},c=function(){n.rotate(Math.PI/2)};o(),e(),i(),o(),e(),i(),o(),e(),c(),o()}(a,c);

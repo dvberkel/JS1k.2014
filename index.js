@@ -23,23 +23,22 @@
 	context.rotate(angle);
     }
 
-    var move = function(goLeft){
+    var move = function(goRight){
 	forward();
-	if (goLeft) {
-	    left();
-	} else {
+	if (goRight) {
 	    right();
+	} else {
+	    left();
 	}
     }
 
-    draw();
-    move(true);
+    var direction = function(n){
+	return (((n & -n) << 1) & n) !== 0;
+    }
 
-    draw();
-    move(true);
-
-    draw();
-    move (false);
-
-    draw();
+    var n = 1; var max = 20;
+    while (n <= max) {
+	draw();
+	move(direction(n++));
+    }
 })(a,c);

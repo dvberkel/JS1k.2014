@@ -1,8 +1,6 @@
-(function(canvas, context, requestAnimationFrame){
-    context.translate(2*canvas.width/3, 2*canvas.height/3);
+(function(size, angle, minimum, canvas, context, requestAnimationFrame){
+    context.translate(minimum(90*size, 2*canvas.width/3), minimum(45*size, 2*canvas.height/3));
     context.strokeStyle = 'black';
-    var size = 5;
-    var angle = Math.PI/2;
 
     var draw = function(){
 	context.beginPath();
@@ -36,11 +34,11 @@
 	return (((n & -n) << 1) & n) !== 0;
     }
 
-    var n = 1;
+    var n = 1; var max = Math.pow(2, 15);
     var continous = function(){
 	draw();
 	move(direction(n++));
 	requestAnimationFrame(continous);
     }
     continous();
-})(a,c, requestAnimationFrame);
+})(5, Math.PI/2, Math.min, a, c, requestAnimationFrame);
